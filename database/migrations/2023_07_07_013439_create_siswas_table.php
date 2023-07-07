@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('siswas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('user');
+            $table->string('name');
+            $table->string('NISN');
+            $table->string('NIPD');
+            $table->string('tempat_lahir');
+            $table->string('kelas');
+            $table->string('agama');
+            $table->string('alamat');
+            $table->string('no_telepon');
             $table->timestamps();
         });
     }
