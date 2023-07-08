@@ -14,5 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard.dashboard');
+});
+
+
+Route::get('/siswa', function () {
+    return view('dashboard.dataSiswa');
+});
+
+Route::get('/daftar-ulang', function () {
+    return view('dashboard.daftarUlang');
+});
+
+Route::get('/bukti-pembayaran', function () {
+    return view('dashboard.buktiPembayaran');
+});
+
+Route::get('/request-nota', function () {
+    return view('dashboard.requestNota');
+});
+
+Route::get('/laporan-respon', function () {
+    return view('dashboard.laporanRespon');
 });
